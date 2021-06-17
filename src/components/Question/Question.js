@@ -5,9 +5,9 @@ export default class Question extends Component {
     super(props);
 
     this.state = {
-      question: "ad",
-      answer: "asdf",
-      category: "asdf",
+      question: "",
+      answer: "",
+      category: "",
     };
 
     console.log("this is the constructor method");
@@ -16,12 +16,8 @@ export default class Question extends Component {
   // componentDidMount gets called after every re-render of the page
   componentDidMount() {
     console.log("this is the componentDidMount method");
-  }
 
-  render() {
-    console.log("this is the render method");
-
-    // Putting this.setState inside render() will cause infinite re-renders
+    // Load data on page load
     fetch("http://jservice.io/api/random")
       .then((response) => response.json())
       .then((data) => {
@@ -34,6 +30,10 @@ export default class Question extends Component {
           category: data[0].category.title,
         });
       });
+  }
+
+  render() {
+    console.log("this is the render method");
 
     return (
       <div>
