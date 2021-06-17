@@ -23,7 +23,11 @@ export default class CategoryList extends Component {
 
   render() {
     const categoryListItems = this.state.categories.map((category, index) => {
-      return <li>{`${category.title}, ${category.id}`}</li>;
+      return (
+        <li
+          key={`${category.title}-${index}`}
+        >{`${category.title}, ${category.id}`}</li>
+      );
     });
     return (
       <div>
