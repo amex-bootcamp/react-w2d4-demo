@@ -11,10 +11,7 @@ class QuestionByCategoryList extends Component {
   }
 
   handleChange = (event) => {
-    const {
-      target: { name, value },
-    } = event;
-    this.setState({ [name]: value });
+    this.setState({ categoryId: event.target.value });
   };
 
   handleSubmit = (event) => {
@@ -33,7 +30,6 @@ class QuestionByCategoryList extends Component {
 
   render() {
     const { heading, categoryId, questions } = this.state;
-
     const questionListItems = questions.map((clue, index) => {
       const { question } = clue;
 
