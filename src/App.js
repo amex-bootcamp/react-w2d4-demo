@@ -32,14 +32,13 @@ function App() {
             <UserList />
           </Route>
           <Route path="/users/:id" component={User} />
-          <Route path="/posts">
+          <Route exact path="/posts">
             <PostList />
           </Route>
+          <Route path="/posts/:postId" component={Post} />
           <Route path="/jeopardy">
             <JeopardyApp />
           </Route>
-
-          <Post />
         </Switch>
       </main>
     </div>

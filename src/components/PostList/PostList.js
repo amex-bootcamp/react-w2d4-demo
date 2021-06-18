@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class PostList extends Component {
   // constructor(props) {
@@ -31,7 +32,11 @@ export default class PostList extends Component {
         <h2>Here are a list of posts:</h2>
         <ul>
           {this.state.posts.map((post, index) => {
-            return <li key={`${post.title}-${index}`}>{post.title}</li>;
+            return (
+              <li key={`${post.title}-${index}`}>
+                <Link to={`/posts/${post.id}`}>{post.title}</Link>
+              </li>
+            );
           })}
         </ul>
       </section>
