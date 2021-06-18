@@ -11,6 +11,7 @@ import PostList from "./components/PostList/PostList";
 import Post from "./components/Post/Post";
 import UserList from "./components/UserList/UserList";
 import User from "./components/User/User";
+import NoMatch from "./components/NoMatch/NoMatch";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/jeopardy">
             <JeopardyApp />
           </Route>
+          <Route path="*" component={NoMatch} />
         </Switch>
       </main>
     </div>
