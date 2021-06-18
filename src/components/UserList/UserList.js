@@ -6,6 +6,7 @@ export default class UserList extends Component {
     super(props);
 
     this.state = {
+      loading: true,
       users: [],
     };
   }
@@ -17,6 +18,7 @@ export default class UserList extends Component {
         console.log("Data", data);
         this.setState({
           users: data,
+          loading: false,
         });
       })
       .catch((error) => console.log(error));
@@ -34,7 +36,7 @@ export default class UserList extends Component {
     return (
       <section>
         <h2>Welcome to the directory of users:</h2>
-        <ul>{userListItems}</ul>
+        {this.state.loading ? <h2>Loading...</h2> : <ul>{userListItems}</ul>}
       </section>
     );
   }
