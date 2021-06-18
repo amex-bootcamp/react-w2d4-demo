@@ -2,10 +2,7 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Question from "./components/Jeopardy/Question/Question";
-import CategoryList from "./components/Jeopardy/CategoryList/CategoryList";
-import QuestionByCategoryList from "./components/Jeopardy/QuestionByCategoryList/QuestionByCategoryList";
-import QuestionList from "./components/Jeopardy/QuestionList/QuestionList";
+import JeopardyApp from "./components/Jeopardy/JeopardyApp";
 
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
@@ -37,12 +34,9 @@ function App() {
           <Route path="/posts">
             <PostList />
           </Route>
+          <JeopardyApp />
           <User />
           <Post />
-          <Question />
-          <CategoryList />
-          <QuestionByCategoryList />
-          <QuestionList />
         </Switch>
       </main>
     </div>

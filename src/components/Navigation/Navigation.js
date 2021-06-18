@@ -19,7 +19,9 @@ export default class Navigation extends Component {
           <li>
             <Link to="/posts">Posts</Link>
           </li>
-          <li>Jeopardy</li>
+          <li>
+            <Link to="/jeopardy">Jeopardy</Link>
+          </li>
         </ul>
       </nav>
     );
