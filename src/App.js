@@ -2,7 +2,7 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
-import JeopardyApp from "./components/Jeopardy/JeopardyApp";
+import JeopardyApp from "./components/Jeopardy/JeopardyApp/JeopardyApp";
 
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
@@ -34,7 +34,9 @@ function App() {
           <Route path="/posts">
             <PostList />
           </Route>
-          <JeopardyApp />
+          <Route path="/jeopardy">
+            <JeopardyApp />
+          </Route>
           <User />
           <Post />
         </Switch>
