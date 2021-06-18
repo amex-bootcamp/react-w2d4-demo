@@ -10,7 +10,12 @@ export default class PostList extends Component {
   // }
 
   state = {
-    posts: ["post 1", "post 2", "post 3", "post 4"],
+    posts: [
+      { title: "post 1" },
+      { title: "post 2" },
+      { title: "post 3" },
+      { title: "post 4" },
+    ],
   };
 
   componentDidMount() {
