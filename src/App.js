@@ -28,16 +28,17 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
+          <Route exact path="/users">
             <UserList />
           </Route>
+          <Route path="/users/:id" component={User} />
           <Route path="/posts">
             <PostList />
           </Route>
           <Route path="/jeopardy">
             <JeopardyApp />
           </Route>
-          <User />
+
           <Post />
         </Switch>
       </main>
