@@ -48,6 +48,7 @@ export default class QuestionList extends Component {
               type="text"
               name="count"
               onChange={this.handleChange}
+              value={this.state.count}
             />
           </div>
           <input type="submit" value="Submit" />
