@@ -1,3 +1,5 @@
+import { Switch, Route } from "react-router-dom";
+
 import "./App.css";
 
 import Question from "./components/Jeopardy/Question/Question";
@@ -20,16 +22,23 @@ function App() {
         <h1>Welcome to my App</h1>
         <Navigation />
       </header>
-      <Home />
-      <About />
-      <UserList />
-      <User />
-      <PostList />
-      <Post />
-      <Question />
-      <CategoryList />
-      <QuestionByCategoryList />
-      <QuestionList />
+
+      <main>
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+          <About />
+          <UserList />
+          <User />
+          <PostList />
+          <Post />
+          <Question />
+          <CategoryList />
+          <QuestionByCategoryList />
+          <QuestionList />
+        </Switch>
+      </main>
     </div>
   );
 }
