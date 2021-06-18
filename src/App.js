@@ -25,10 +25,12 @@ function App() {
 
       <main>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <About />
+          <Route path="/about">
+            <About />
+          </Route>
           <UserList />
           <User />
           <PostList />
