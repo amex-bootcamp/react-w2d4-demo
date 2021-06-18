@@ -1,8 +1,10 @@
 import "./App.css";
-import Question from "./components/Question/Question";
-import CategoryList from "./components/CategoryList/CategoryList";
-import QuestionByCategoryList from "./components/QuestionByCategoryList/QuestionByCategoryList";
-import QuestionList from "./components/QuestionList/QuestionList";
+
+import Question from "./components/Jeopardy/Question/Question";
+import CategoryList from "./components/Jeopardy/CategoryList/CategoryList";
+import QuestionByCategoryList from "./components/Jeopardy/QuestionByCategoryList/QuestionByCategoryList";
+import QuestionList from "./components/Jeopardy/QuestionList/QuestionList";
+
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Navigation from "./components/Navigation/Navigation";
