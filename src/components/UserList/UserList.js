@@ -14,11 +14,11 @@ export default class UserList extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log("Data", data);
-
         this.setState({
           users: data,
         });
-      });
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {
