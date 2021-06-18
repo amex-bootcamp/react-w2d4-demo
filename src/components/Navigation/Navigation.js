@@ -13,8 +13,12 @@ export default class Navigation extends Component {
           <li>
             <Link to="/about">About</Link>
           </li>
-          <li>Users</li>
-          <li>Posts</li>
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
+          <li>
+            <Link to="/posts">Posts</Link>
+          </li>
           <li>Jeopardy</li>
         </ul>
       </nav>

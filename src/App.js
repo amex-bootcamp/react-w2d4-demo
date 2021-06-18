@@ -31,9 +31,13 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <UserList />
+          <Route path="/users">
+            <UserList />
+          </Route>
+          <Route path="/posts">
+            <PostList />
+          </Route>
           <User />
-          <PostList />
           <Post />
           <Question />
           <CategoryList />
